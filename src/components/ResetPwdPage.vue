@@ -1,33 +1,17 @@
 <script setup>
-import { onMounted, ref } from 'vue';
+import { onMounted } from 'vue';
 import { usePageStore } from '../stores/page';
-import axios from 'axios';
 
 onMounted(() => {
     const store = usePageStore()
-    store.signinPage()
+    store.mainPage()
 
     console.log(store.current)
 })
-
-const user_email = ref('')
-const password = ref('')
-
-const sendCredentials = () => {
-  axios.post('http://www.test.tk/api/login/', {
-    user_email: user_email.value,
-    password: password.value,
-    },
-    ).then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-}
 </script>
 
 <template>
+
     <!-- ====== Banner Section Start -->
     <div
       class="
@@ -112,14 +96,16 @@ const sendCredentials = () => {
               "
               data-wow-delay=".15s"
             >
-              <div class="mb-10 text-center text-2xl font-bold">
-               登入
+              <div class="mb-10 text-center  ">
+                <h1 class="text-2xl font-bold ">
+                  請輸入新的密碼
+                </h1>
               </div>
+              <form>
                 <div class="mb-6">
                   <input
-                    v-model="user_email"
                     type="email"
-                    placeholder="電子信箱"
+                    placeholder="請輸入新密碼"
                     class="
                       w-full
                       rounded-md
@@ -135,13 +121,13 @@ const sendCredentials = () => {
                       focus:border-primary
                       transition
                     "
+                    
                   />
                 </div>
                 <div class="mb-6">
                   <input
-                    v-model="password"
-                    type="password"
-                    placeholder="密碼"
+                    type="email"
+                    placeholder="再次確認新密碼"
                     class="
                       w-full
                       rounded-md
@@ -157,36 +143,33 @@ const sendCredentials = () => {
                       focus:border-primary
                       transition
                     "
+                    
                   />
                 </div>
-           
-                  <div class="mb-8">
-                    <button @click="sendCredentials()" class="
-                        w-full
-                        rounded-md
-                        border
-                        bordder-primary
-                        py-3
-                        px-5
-                        bg-primary
-                        text-base text-white
-                        cursor-pointer
-                        hover:shadow-md
-                        transition
-                        duration-300
-                        ease-in-out">
-                        登入
-                        </button>
-                  </div>
-              <router-link to="/forgotpwd" class=" text-primary inline-block mb-2 hover:underline">
-                忘記密碼?
-              </router-link>
-              <p class="text-base text-[#adadad]">
-                還不是會員?
-                <router-link to="/signup" class="text-primary hover:underline">
-                  註冊
-                </router-link>
-              </p>
+                <div class="mb-10">
+                  <input
+                    type="submit"
+                    value="重設密碼"
+                    class="
+                      w-full
+                      rounded-md
+                      border
+                      bordder-primary
+                      py-3
+                      px-5
+                      bg-primary
+                      text-base text-white
+                      cursor-pointer
+                      hover:shadow-md
+                      transition
+                      duration-300
+                      ease-in-out
+                    "
+                    />
+          
+                </div>
+              </form>
+ 
 
               <div>
                 <span class="absolute top-1 right-1">
@@ -415,6 +398,5 @@ const sendCredentials = () => {
 
 </template>
 
-<style>
-
+<style scoped>
 </style>

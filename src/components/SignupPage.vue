@@ -187,9 +187,9 @@ onMounted(() => {
            
               <p class="text-base text-[#adadad]">
                 已經有帳號了?
-                <a href="signin.html" class="text-primary hover:underline">
+                <router-link to="/signin" class="text-primary hover:underline">
                   登入
-                </a>
+                </router-link>
               </p>
 
               <div>
