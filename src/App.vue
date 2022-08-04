@@ -30,7 +30,7 @@ let store = usePageStore()
           <div class="px-4 w-60 max-w-full">
             <a href="index.html" class="navbar-logo w-full block py-5">
               <img
-                src="src/assets/images/logo/logo-white.svg"
+                src="/src/assets/images/logo/logo-white.svg"
                 alt="logo"
                 class="w-full header-logo"
               />
@@ -64,133 +64,7 @@ let store = usePageStore()
                   class="relative w-[30px] h-[2px] my-[6px] block bg-white"
                 ></span>
               </button>
-              <nav
-                id="navbarCollapse"
-                class="
-                  absolute
-                  py-5
-                  lg:py-0 lg:px-4
-                  xl:px-6
-                  bg-white
-                  lg:bg-transparent
-                  shadow-lg
-                  rounded-lg
-                  max-w-[250px]
-                  w-full
-                  lg:max-w-full lg:w-full
-                  right-4
-                  top-full
-                  hidden
-                  lg:block lg:static lg:shadow-none
-                "
-              >
-                <ul class="blcok lg:flex">
-                  <li class="relative group">
-                    <a
-                      href="#home"
-                      class="
-                        ud-menu-scroll
-                        text-base text-white
-                        lg:text-white
-                        lg:group-hover:opacity-70
-                        lg:group-hover:text-white
-                        group-hover:text-primary
-                        py-2
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex
-                        mx-8
-                        lg:mr-0
-                      "
-                    >
-                      首頁
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="#sign"
-                      class="
-                        ud-menu-scroll
-                        text-base text-dark
-                        lg:text-white
-                        lg:group-hover:opacity-70
-                        lg:group-hover:text-white
-                        group-hover:text-primary
-                        py-2
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex
-                        mx-8
-                        lg:mr-0 lg:ml-7
-                        xl:ml-12
-                      "
-                    >
-                      開始使用
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="#project"
-                      class="
-                        ud-menu-scroll
-                        text-base text-dark
-                        lg:text-white
-                        lg:group-hover:opacity-70
-                        lg:group-hover:text-white
-                        group-hover:text-primary
-                        py-2
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex
-                        mx-8
-                        lg:mr-0 lg:ml-7
-                        xl:ml-12
-                      "
-                    >
-                      協作
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="#community"
-                      class="
-                        ud-menu-scroll
-                        text-base text-dark
-                        lg:text-white
-                        lg:group-hover:opacity-70
-                        lg:group-hover:text-white
-                        group-hover:text-primary
-                        py-2
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex
-                        mx-8
-                        lg:mr-0 lg:ml-7
-                        xl:ml-12
-                      "
-                    >
-                      社群
-                    </a>
-                  </li>
-                  <li class="relative group">
-                    <a
-                      href="#shop"
-                      class="
-                        ud-menu-scroll
-                        text-base text-dark
-                        lg:text-white
-                        lg:group-hover:opacity-70
-                        lg:group-hover:text-white
-                        group-hover:text-primary
-                        py-2
-                        lg:py-6 lg:inline-flex lg:px-0
-                        flex
-                        mx-8
-                        lg:mr-0 lg:ml-7
-                        xl:ml-12
-                      "
-                    >
-                      店家
-                    </a>
-                  </li>
-                </ul>
-              </nav>
+
             </div>
             <div class="sm:flex justify-end lg:pr-0">
             <router-link class="

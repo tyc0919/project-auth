@@ -12,6 +12,8 @@ onMounted(() => {
 
 <template>
 
+
+
    <!-- ====== 首頁 Start -->
     <div
       id="home"
@@ -154,7 +156,7 @@ onMounted(() => {
                 <div class="text-center">
                   <div class="relative inline-block z-10">
                     <img
-                      src="src/assets/images/about/about-image.svg"
+                      src="/src/assets/images/about/about-image.svg"
                       alt="image"
                       class="mx-auto lg:ml-auto"
                     />
@@ -2704,8 +2706,6 @@ onMounted(() => {
       </div>
     </section>
     <!-- ====== 店家 End ====== -->
-
-
 </template>
 
 <style scoped>

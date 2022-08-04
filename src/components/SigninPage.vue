@@ -112,6 +112,9 @@ const sendCredentials = () => {
               "
               data-wow-delay=".15s"
             >
+
+            
+
               <div class="mb-10 text-center text-2xl font-bold">
                登入
               </div>
@@ -160,6 +163,25 @@ const sendCredentials = () => {
                   />
                 </div>
            
+                  <div class="relative mb-7">
+                  <div class="inline-block mr-3">
+                    <input
+                      type="radio"
+                      name="identity"
+                      checked
+                    />
+                    <label for="user">使用者</label>
+                  </div>
+                  
+                  <div class="inline-block">
+                    <input
+                    type="radio"
+                    name="identity"
+                  />
+                  <label for="huey">店家</label>
+                  </div>
+              </div>
+
                   <div class="mb-8">
                     <button @click="sendCredentials()" class="
                         w-full
