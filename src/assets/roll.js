@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-
+  
   // ======= Sticky
   window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
@@ -14,11 +14,11 @@
     }
 
     // === logo change
-    if (ud_header.classList.contains("sticky")) {
-      logo.src = "/src/assets/images/logo/logo.svg";
-    } else {
-      logo.src = "/src/assets/images/logo/logo-white.svg";
-    }
+    // if (ud_header.classList.contains("sticky")) {
+    //   logo.src = "/assets/images/logo/logo.svg";
+    // } else {
+    //   logo.src = "/assets/images/logo/logo-white.svg";
+    // }
 
     // show or hide the back-top-top button
     const backToTop = document.querySelector(".back-to-top");
@@ -68,8 +68,6 @@
     });
   });
 
-  // ===== wow js
-  new WOW().init();
 
   // ====== scroll top js
   function scrollTo(element, to = 0, duration = 500) {
