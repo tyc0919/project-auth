@@ -22,6 +22,7 @@ const sendForm = async () => {
 
   let data = {
     user_email: user_email.value,
+    user_name: user_name.value,
     password: password.value,
     user_type: user_type.value
   }
