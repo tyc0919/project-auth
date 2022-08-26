@@ -74,7 +74,7 @@ onMounted(() => {
         
         </div>
         <div class="pb-8 wow fadeInUp  lg:pl-[62px] ">
-          <img src="src\assets\images\main.png" width="650" height='650' >
+          <img src="/src\assets\images\main.png" width="650" height='650' >
         </div>
       </div>
     </div>
@@ -221,7 +221,7 @@ onMounted(() => {
                 "
               >
                 <img
-                  src="src/assets/images/team/team-01.png"
+                  src="/src/assets/images/team/team-01.png"
                   alt="image"
                   class="w-full rounded-full"
                 />
@@ -746,7 +746,7 @@ onMounted(() => {
                 "
               >
                 <img
-                  src="src/assets/images/team/team-02.png"
+                  src="/src/assets/images/team/team-02.png"
                   alt="image"
                   class="w-full rounded-full"
                 />
@@ -1269,7 +1269,7 @@ onMounted(() => {
                 "
               >
                 <img
-                  src="src/assets/images/team/team-03.png"
+                  src="/src/assets/images/team/team-03.png"
                   alt="image"
                   class="w-full rounded-full"
                 />
@@ -1794,7 +1794,7 @@ onMounted(() => {
                 "
               >
                 <img
-                  src="src/assets/images/team/team-01.png"
+                  src="/src/assets/images/team/team-01.png"
                   alt="image"
                   class="w-full rounded-full"
                 />
@@ -2441,7 +2441,7 @@ onMounted(() => {
                   "
                 >
                   <img
-                    src="src/assets/images/testimonials/author-01.png"
+                    src="/src/assets/images/testimonials/author-01.png"
                     alt="author"
                   />
                 </div>
@@ -2545,7 +2545,7 @@ onMounted(() => {
                   "
                 >
                   <img
-                    src="src/assets/images/testimonials/author-02.png"
+                    src="/src/assets/images/testimonials/author-02.png"
                     alt="author"
                   />
                 </div>
@@ -2649,7 +2649,7 @@ onMounted(() => {
                   "
                 >
                   <img
-                    src="src/assets/images/testimonials/author-03.png"
+                    src="/src/assets/images/testimonials/author-03.png"
                     alt="author"
                   />
                 </div>
@@ -2700,7 +2700,7 @@ onMounted(() => {
             </div>
           </div>
           <div class="px-4 w-full lg:w-5/12 xl:w-4/12">
-           <img src="src/assets/images/shop.png" alt="" srcset="">
+           <img src="/src/assets/images/shop.png" alt="" srcset="">
           </div>
         </div>
       </div>
