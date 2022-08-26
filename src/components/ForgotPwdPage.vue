@@ -4,72 +4,73 @@ import { usePageStore } from '../stores/page';
 
 onMounted(() => {
     const store = usePageStore()
-    store.signupPage()
+    store.mainPage()
 
     console.log(store.current)
 })
 </script>
 
 <template>
-    <!-- ====== Banner Section Start -->
-    <div
-    class="
-      relative
-      z-10
-      pt-[120px]
-      bg-primary
-      overflow-hidden
-    "
-  >
-  
-    <div>
-      <span class="absolute top-0 left-0 z-[-1]">
-        <svg
-          width="495"
-          height="470"
-          viewBox="0 0 495 470"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="55"
-            cy="442"
-            r="138"
-            stroke="white"
-            stroke-opacity="0.04"
-            stroke-width="50"
-          />
-     
-        
-        </svg>
-      </span>
-      <span class="absolute top-0 right-0 z-[-1]">
-        <svg
-          width="493"
-          height="470"
-          viewBox="0 0 493 470"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
 
-          <circle
-            cx="49"
-            cy="470"
-            r="39"
-            stroke="white"
-            stroke-opacity="0.04"
-            stroke-width="20"
-          />
-          <path
-            d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
-            stroke="white"
-            stroke-opacity="0.06"
-            stroke-width="13"
-          />
-        </svg>
-      </span>
+  <!-- ====== Banner Section Start -->
+    <div
+      class="
+        relative
+        z-10
+        pt-[120px]
+        bg-primary
+        overflow-hidden
+      "
+    >
+    
+      <div>
+        <span class="absolute top-0 left-0 z-[-1]">
+          <svg
+            width="495"
+            height="470"
+            viewBox="0 0 495 470"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="55"
+              cy="442"
+              r="138"
+              stroke="white"
+              stroke-opacity="0.04"
+              stroke-width="50"
+            />
+       
+          
+          </svg>
+        </span>
+        <span class="absolute top-0 right-0 z-[-1]">
+          <svg
+            width="493"
+            height="470"
+            viewBox="0 0 493 470"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+
+            <circle
+              cx="49"
+              cy="470"
+              r="39"
+              stroke="white"
+              stroke-opacity="0.04"
+              stroke-width="20"
+            />
+            <path
+              d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
+              stroke="white"
+              stroke-opacity="0.06"
+              stroke-width="13"
+            />
+          </svg>
+        </span>
+      </div>
     </div>
-  </div>
     <!-- ====== Banner Section End -->
 
     <!-- ====== Forms Section Start -->
@@ -95,35 +96,16 @@ onMounted(() => {
               "
               data-wow-delay=".15s"
             >
-              <div class="mb-10 text-center text-2xl font-bold">
-              註冊
+              <div class="mb-10 text-center  ">
+                <h1 class="sm:text-xl md:text-2xl font-bold ">
+                  請輸入電子信箱以重設密碼
+                </h1>
               </div>
               <form>
                 <div class="mb-6">
                   <input
-                    type="text"
-                    placeholder="稱呼"
-                    class="
-                      w-full
-                      rounded-md
-                      border
-                      bordder-[#E9EDF4]
-                      py-3
-                      px-5
-                      bg-[#FCFDFE]
-                      text-base text-body-color
-                      placeholder-[#ACB6BE]
-                      outline-none
-                      focus-visible:shadow-none
-                      focus:border-primary
-                      transition
-                    "
-                  />
-                </div>
-                <div class="mb-6">
-                  <input
                     type="email"
-                    placeholder="電子信箱"
+                    placeholder="請輸入電子信箱"
                     class="
                       w-full
                       rounded-md
@@ -139,53 +121,14 @@ onMounted(() => {
                       focus:border-primary
                       transition
                     "
+                    
                   />
                 </div>
-                <div class="mb-6">
-                  <input
-                    type="password"
-                    placeholder="密碼"
-                    class="
-                      w-full
-                      rounded-md
-                      border
-                      bordder-[#E9EDF4]
-                      py-3
-                      px-5
-                      bg-[#FCFDFE]
-                      text-base text-body-color
-                      placeholder-[#ACB6BE]
-                      outline-none
-                      focus-visible:shadow-none
-                      focus:border-primary
-                      transition
-                    "
-                  />
-                </div>
-
-                  <div class="relative mb-7">
-                  <div class="inline-block mr-3">
-                    <input
-                      type="radio"
-                      name="identity"
-                      checked
-                    />
-                    <label for="user">使用者</label>
-                  </div>
-                  
-                  <div class="inline-block">
-                    <input
-                    type="radio"
-                    name="identity"
-                  />
-                  <label for="huey">店家</label>
-                  </div>
-              </div>
-
+  
                 <div class="mb-10">
                   <input
                     type="submit"
-                    value="註冊"
+                    value="發送郵件"
                     class="
                       w-full
                       rounded-md
@@ -201,16 +144,11 @@ onMounted(() => {
                       duration-300
                       ease-in-out
                     "
-                  />
+                    />
+          
                 </div>
               </form>
-           
-              <p class="text-base text-[#adadad]">
-                已經有帳號了?
-                <router-link to="/signin" class="text-primary hover:underline">
-                  登入
-                </router-link>
-              </p>
+ 
 
               <div>
                 <span class="absolute top-1 right-1">
@@ -436,8 +374,9 @@ onMounted(() => {
       </div>
     </section>
     <!-- ====== Forms Section End -->
+
+
 </template>
 
-<style>
-
+<style scoped>
 </style>
