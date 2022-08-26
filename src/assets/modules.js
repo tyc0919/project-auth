@@ -16,23 +16,20 @@ const getCookie = (name) => {
     return cookieValue;
   }
 
-const getCSRFIfNotExist = async (csrftoken) => {
-    if (!csrftoken) {
-        await axios.post('http://www.ace.project/api/csrf-get/'
-        ).then(function (response) {
-          console.log(response.data);
-          return csrftoken
-        })
-          .catch(function (error) {
-            console.log(error.data);
-            return null
-        });
-    }
-    return csrftoken
-}
-const checkCSRF = async (name) => {
-    let csrftoken = getCookie(name)
-    return await getCSRFIfNotExist(csrftoken)
+const getCSRFIfNotExist = (csrftoken) => {
+    return new Promise(async (resolve, reject) => {
+        if (!csrftoken) {
+            await axios.post('http://www.ace.project/api/csrf-get/'
+            ).then(function (response) {
+                console.log(response.data)
+                resolve(getCookie('csrftoken'))
+            })
+            .catch(function (error) {
+                console.log(error.data)
+                reject(null)
+            });
+        }
+    })
 }
 
-export {checkCSRF, getCookie}
+export {getCookie, getCSRFIfNotExist}

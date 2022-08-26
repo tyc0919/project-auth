@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { usePageStore } from '../stores/page';
-import {checkCSRF} from '../assets/modules'
+import {getCookie, getCSRFIfNotExist} from '../assets/modules'
 import axios from 'axios';
 
 onMounted(() => {
@@ -17,8 +17,14 @@ const user_type = ref('user')
 
 const sendCredentials = async () => {
 
-  const csrftoken = await checkCSRF('csrftoken')
+  const csrftoken = getCookie('csrftoken')
   
+  await getCSRFIfNotExist('csrftoken').then((result) => {
+    csrftoken = result
+  }).catch((result) => {
+    csrftoken = result
+  })
+
 
   let data = {
     user_email: user_email.value,
