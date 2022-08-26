@@ -17,13 +17,8 @@ const user_type = ref('user')
 
 const sendCredentials = async () => {
 
-  const csrftoken = getCookie('csrftoken')
-  
-  await getCSRFIfNotExist('csrftoken').then((result) => {
-    csrftoken = result
-  }).catch((result) => {
-    csrftoken = result
-  })
+  let csrftoken_temp = getCookie('csrftoken')
+  const csrftoken = await getCSRFIfNotExist(csrftoken_temp)
 
 
   let data = {
