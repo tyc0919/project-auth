@@ -1,6 +1,8 @@
 <script setup>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 import { usePageStore } from '../stores/page';
+import {checkCSRF} from '../assets/modules'
+import axios from 'axios';
 
 onMounted(() => {
     const store = usePageStore()
@@ -8,6 +10,36 @@ onMounted(() => {
 
     console.log(store.current)
 })
+const user_email = ref('')
+const password = ref('')
+const user_type = ref('user')
+
+const sendForm = async () => {
+
+  const csrftoken = checkCSRF('csrftoken')
+  
+  let data = {
+    user_email: user_email.value,
+    password: password.value,
+    user_type: user_type.value
+  }
+
+  let config = {
+    headers: {
+      'X-CSRFToken': csrftoken
+      },
+    mode: 'same-origin'
+  }
+
+  await axios.post('http://www.ace.project/api/signup/',data,config)
+  .then(function (response) {
+    console.log(response);
+  })
+    .catch(function (error) {
+      console.log(error);
+  });
+}
+
 </script>
 
 <template>
@@ -98,7 +130,6 @@ onMounted(() => {
               <div class="mb-10 text-center text-2xl font-bold">
               註冊
               </div>
-              <form>
                 <div class="mb-6">
                   <input
                     type="text"
@@ -121,7 +152,7 @@ onMounted(() => {
                   />
                 </div>
                 <div class="mb-6">
-                  <input
+                  <input v-model="user_email"
                     type="email"
                     placeholder="電子信箱"
                     class="
@@ -143,7 +174,7 @@ onMounted(() => {
                 </div>
                 <div class="mb-6">
                   <input
-                    type="password"
+                    type="password" v-model="password"
                     placeholder="密碼"
                     class="
                       w-full
@@ -169,6 +200,7 @@ onMounted(() => {
                       type="radio"
                       name="identity"
                       value="user"
+                      v-model="user_type"
                       checked
                     />
                     <label for="user">使用者</label>
@@ -179,15 +211,14 @@ onMounted(() => {
                     type="radio"
                     name="identity"
                     value="shop"
+                    v-model="user_type"
                   />
                   <label for="huey">店家</label>
                   </div>
               </div>
 
                 <div class="mb-10">
-                  <input
-                    type="submit"
-                    value="註冊"
+                  <button
                     class="
                       w-full
                       rounded-md
@@ -203,9 +234,10 @@ onMounted(() => {
                       duration-300
                       ease-in-out
                     "
-                  />
+                    @click="sendForm()"
+                  >註冊
+                  </button>
                 </div>
-              </form>
            
               <p class="text-base text-[#adadad]">
                 已經有帳號了?

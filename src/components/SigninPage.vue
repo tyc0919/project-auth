@@ -13,25 +13,17 @@ onMounted(() => {
 
 const user_email = ref('')
 const password = ref('')
-
+const user_type = ref('user')
 
 const sendCredentials = async () => {
 
   const csrftoken = checkCSRF('csrftoken')
   
-  // if (!csrftoken) {
-  //   axios.post('http://www.ace.project/api/csrf-get/', {
-  //   },
-  //   ).then(function (response) {
-  //     console.log(response.data);
-  //   })
-  //     .catch(function (error) {
-  //       console.log(error.data);
-  //     });
-  // }
+
   let data = {
     user_email: user_email.value,
     password: password.value,
+    user_type: user_type.value
   }
   let config = {
     headers: {
@@ -40,7 +32,7 @@ const sendCredentials = async () => {
     mode: 'same-origin'
   }
 
-  axios.post('http://www.ace.project/api/login/',data,config)
+  await axios.post('http://www.ace.project/api/login/',data,config)
   .then(function (response) {
     console.log(response);
   })
@@ -143,12 +135,12 @@ const sendCredentials = async () => {
 
             <div class="relative mb-7">
               <div class="inline-block mr-3">
-                <input type="radio" name="identity" checked />
+                <input type="radio" name="identity" value="user" v-model="user_type" checked />
                 <label for="user">使用者</label>
               </div>
 
               <div class="inline-block">
-                <input type="radio" name="identity" />
+                <input type="radio" name="identity" value="shop" v-model="user_type"/>
                 <label for="huey">店家</label>
               </div>
             </div>

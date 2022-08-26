@@ -16,9 +16,9 @@ const getCookie = (name) => {
     return cookieValue;
   }
 
-const getCSRFIfNotExist = (csrftoken) => {
+const getCSRFIfNotExist = async (csrftoken) => {
     if (!csrftoken) {
-        axios.post('http://www.ace.project/api/csrf-get/'
+        await axios.post('http://www.ace.project/api/csrf-get/'
         ).then(function (response) {
           console.log(response.data);
           return csrftoken
