@@ -16,7 +16,7 @@ const user_type = ref('user')
 
 const sendForm = async () => {
 
-  const csrftoken = checkCSRF('csrftoken')
+  const csrftoken = await checkCSRF('csrftoken')
   
   let data = {
     user_email: user_email.value,

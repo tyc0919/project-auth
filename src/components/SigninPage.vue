@@ -17,7 +17,7 @@ const user_type = ref('user')
 
 const sendCredentials = async () => {
 
-  const csrftoken = checkCSRF('csrftoken')
+  const csrftoken = await checkCSRF('csrftoken')
   
 
   let data = {
