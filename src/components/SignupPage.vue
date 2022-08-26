@@ -168,6 +168,7 @@ onMounted(() => {
                     <input
                       type="radio"
                       name="identity"
+                      value="user"
                       checked
                     />
                     <label for="user">使用者</label>
@@ -177,6 +178,7 @@ onMounted(() => {
                     <input
                     type="radio"
                     name="identity"
+                    value="shop"
                   />
                   <label for="huey">店家</label>
                   </div>
