@@ -30,9 +30,9 @@ const getCSRFIfNotExist = async (csrftoken) => {
     }
     return csrftoken
 }
-const checkCSRF = (name) => {
+const checkCSRF = async (name) => {
     let csrftoken = getCookie(name)
-    return getCSRFIfNotExist(csrftoken)
+    return await getCSRFIfNotExist(csrftoken)
 }
 
 export {checkCSRF, getCookie}
