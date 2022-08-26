@@ -11,6 +11,7 @@ onMounted(() => {
     console.log(store.current)
 })
 const user_email = ref('')
+const user_name = ref('')
 const password = ref('')
 const user_type = ref('user')
 
@@ -132,7 +133,7 @@ const sendForm = async () => {
               註冊
               </div>
                 <div class="mb-6">
-                  <input
+                  <input v-model="user_name"
                     type="text"
                     placeholder="稱呼"
                     class="
