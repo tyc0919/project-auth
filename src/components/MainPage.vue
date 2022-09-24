@@ -127,8 +127,8 @@ onMounted(() => {
                    加入會員，<br> 開始管理您與團隊的專案
                   </h2>
               
-                  <a
-                    href="signup.html"
+                  <router-link
+                    to="/signup"
                     class="
                       
                       text-xl
@@ -151,7 +151,7 @@ onMounted(() => {
                     "
                   >
                     開始使用
-                  </a>
+                  </router-link>
                 </div>
                 <div class="text-center">
                   <div class="relative inline-block z-10">
