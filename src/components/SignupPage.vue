@@ -31,6 +31,7 @@ const sendForm = async () => {
             'X-CSRFToken': csrftoken,
         },
         mode: 'same-origin',
+        withCredentials: true,
     }
 
     await axios

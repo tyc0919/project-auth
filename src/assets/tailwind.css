@@ -58,6 +58,7 @@ body {
   /* 1 */
   line-height: inherit;
   /* 2 */
+  height: 100%;
 }
 
 /*
