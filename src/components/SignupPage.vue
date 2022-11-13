@@ -7,8 +7,6 @@ import axios from 'axios'
 onMounted(() => {
     const store = usePageStore()
     store.signupPage()
-
-    console.log(store.current)
 })
 const user_email = ref('')
 const user_name = ref('')
@@ -47,7 +45,7 @@ const sendForm = async () => {
 
 <template>
     <!-- ====== Banner Section Start -->
-    <div class="relative z-10 pt-[120px] bg-primary overflow-hidden">
+    <div class="relative z-10 bg-primary overflow-hidden">
         <div>
             <span class="absolute top-0 left-0 z-[-1]">
                 <svg width="495" height="470" viewBox="0 0 495 470" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +68,7 @@ const sendForm = async () => {
     <!-- ====== Banner Section End -->
 
     <!-- ====== Forms Section Start -->
-    <section class="bg-[#F4F7FF] py-6 lg:py-12">
+    <section class="bg-[#F4F7FF] py-6 lg:py-12" style="margin-top: 10rem; margin-bottom: 10rem">
         <div class="container">
             <div class="flex flex-wrap -mx-4">
                 <div class="w-full px-4">

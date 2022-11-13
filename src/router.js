@@ -2,13 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from './components/MainPage.vue'
 import SigninPage from './components/SigninPage.vue'
 import SignupPage from './components/SignupPage.vue'
-import ForgotPwdPage from './components/ForgotPwdPage.vue'
-import ResetPwdPage from './components/ResetPwdPage.vue'
 
 const routes = [
     {
         path: '/',
         component: MainPage,
+        name:'main',
     },
     {
         path: '/signin',
@@ -17,14 +16,6 @@ const routes = [
     {
         path: '/signup',
         component: SignupPage,
-    },
-    {
-        path: '/forgotpwd',
-        component: ForgotPwdPage,
-    },
-    {
-        path: '/resetpwd',
-        component: ResetPwdPage,
     },
     {
         path: '/:pathMatch(.*)*',
