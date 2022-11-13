@@ -33,10 +33,11 @@ const sendCredentials = async () => {
     await axios
         .post('http://www.ace.project/api/login/', data, config)
         .then(function (response) {
-            console.log(response)
+            alert('登入成功')
+            window.location.href = 'https://app.project-ace.site/'
         })
         .catch(function (error) {
-            console.log(error)
+            alert('登入失敗')
         })
 }
 </script>
