@@ -23,7 +23,7 @@ onMounted(() => {
                         <p
                             class="text-center md:text-left text-xl sm:text-lg sm:leading-relaxed md:text-xl md:leading-relaxed mx-auto md:mb-10 text-[#e4e4e4] max-w-[600px]"
                         >
-                            管理、追蹤您的團隊的專案進度
+                            管理、追蹤您的團隊的活動進度
                         </p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@ onMounted(() => {
                                     class="font-bold text-2xl pt-20 sm:text-3xl 2xl:text-[40px] sm:leading-snug text-dark mb-6"
                                 >
                                     加入會員，<br />
-                                    開始管理您與團隊的專案
+                                    開始管理您與團隊的活動
                                 </h2>
 
                                 <router-link
@@ -85,7 +85,7 @@ onMounted(() => {
                         <span class="font-semibold text-lg text-primary mb-2 block text-2xl"> 開始協作 </span>
                         <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">加入協作人員</h2>
                         <p class="text-lg sm:text-xl leading-relaxed sm:leading-relaxed text-body-color">
-                            利用專案創立後自動產生的邀請碼，即可快速邀請您的隊友一起協作
+                            利用活動創立後自動產生的邀請碼，即可快速邀請您的隊友一起協作
                         </p>
                     </div>
                 </div>
@@ -1963,9 +1963,9 @@ onMounted(() => {
             <div class="flex flex-wrap">
                 <div class="w-full mx-4">
                     <div class="text-center mx-auto mb-[60px] lg:mb-20 max-w-[620px]">
-                        <span class="font-semibold text-lg text-primary text-2xl mb-2 block"> 專案分享社群 </span>
+                        <span class="font-semibold text-lg text-primary text-2xl mb-2 block"> 活動分享社群 </span>
                         <h2 class="font-bold text-3xl sm:text-4xl md:text-[42px] text-dark mb-4">
-                            尋找與您專案類型相似的案例
+                            尋找與您活動類型相似的案例
                         </h2>
                         <p class="text-lg sm:text-xl leading-relaxed sm:leading-relaxed text-body-color">
                             進入社群，查看、評論別人分享的案例與心得
