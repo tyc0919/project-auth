@@ -34,7 +34,7 @@ const sendCredentials = async () => {
         .post('http://www.ace.project/api/login/', data, config)
         .then(function (response) {
             alert('登入成功')
-            window.location.href = 'http://app.ace.project/'
+            window.location.href = 'http://app.project-ace.site/'
         })
         .catch(function (error) {
             alert('登入失敗')
