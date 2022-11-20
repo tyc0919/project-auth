@@ -3,6 +3,7 @@ import { onMounted, ref } from 'vue'
 import { usePageStore } from '../stores/page'
 import { getCookie, getCSRFIfNotExist } from '../assets/modules'
 import axios from 'axios'
+import { useRouter } from 'vue-router';
 
 onMounted(() => {
     const store = usePageStore()
@@ -35,10 +36,12 @@ const sendForm = async () => {
     await axios
         .post('https://www.project-ace.site/api/signup/', data, config)
         .then(function (response) {
-            console.log(response)
+            alert('註冊成功')
+            let router = useRouter()
+            router.push('signin')
         })
         .catch(function (error) {
-            console.log(error)
+            alert('註冊失敗')
         })
 }
 </script>

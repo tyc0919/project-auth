@@ -12,10 +12,12 @@ const routes = [
     {
         path: '/signin',
         component: SigninPage,
+        name: 'signin'
     },
     {
         path: '/signup',
         component: SignupPage,
+        name: 'signup'
     },
     {
         path: '/:pathMatch(.*)*',
