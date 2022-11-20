@@ -31,10 +31,10 @@ const sendCredentials = async () => {
     }
 
     await axios
-        .post('http://www.ace.project/api/login/', data, config)
+        .post('http://app.project-ace.site/api/login/', data, config)
         .then(function (response) {
             alert('登入成功')
-            window.location.href = 'http://app.project-ace.site/'
+            window.location.href = 'https://app.project-ace.site/'
         })
         .catch(function (error) {
             alert('登入失敗')

@@ -33,7 +33,7 @@ const sendForm = async () => {
     }
 
     await axios
-        .post('http://www.ace.project/api/signup/', data, config)
+        .post('https://www.project-ace.site/api/signup/', data, config)
         .then(function (response) {
             console.log(response)
         })
