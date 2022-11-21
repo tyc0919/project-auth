@@ -37,11 +37,9 @@ const sendForm = async () => {
         .post('https://www.project-ace.site/api/signup/', data, config)
         .then(function (response) {
             alert('註冊成功')
-            let router = useRouter()
-            router.push('signin')
+            window.location.href = "/signin"
         })
         .catch(function (error) {
-            console.log(error)
             alert('註冊失敗')
         })
 }
