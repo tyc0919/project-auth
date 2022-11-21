@@ -41,6 +41,7 @@ const sendForm = async () => {
             router.push('signin')
         })
         .catch(function (error) {
+            console.log(error)
             alert('註冊失敗')
         })
 }
